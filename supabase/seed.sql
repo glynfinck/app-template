@@ -1,0 +1,1 @@
+-- Test data for local development. Loaded by `npx supabase db reset` after all migrations.

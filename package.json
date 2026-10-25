@@ -1,0 +1,28 @@
+{
+  "name": "app-template",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:client": "npm run start -w apps/client",
+    "dev:api": "npm run dev -w apps/api",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "release:ios": "node scripts/release.mjs ios",
+    "release:android": "node scripts/release.mjs android",
+    "db:start": "supabase start",
+    "db:stop": "supabase stop",
+    "db:reset": "supabase db reset",
+    "db:types": "supabase gen types --local --lang typescript > packages/core/src/db-types.ts"
+  },
+  "overrides": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "supabase": "^2.122.0"
+  }
+}

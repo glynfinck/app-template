@@ -1,0 +1,12 @@
+{
+  "add": [
+    { "inputs": [], "expected": 0 },
+    { "inputs": [100, 250], "expected": 350 },
+    { "inputs": [1999, -500, 1], "expected": 1500 }
+  ],
+  "format": [
+    { "cents": 123456, "currency": "CAD", "locale": "en-CA", "expected": "$1,234.56" },
+    { "cents": 0, "currency": "USD", "locale": "en-US", "expected": "$0.00" },
+    { "cents": -5, "currency": "USD", "locale": "en-US", "expected": "-$0.05" }
+  ]
+}
